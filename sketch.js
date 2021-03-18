@@ -19,7 +19,7 @@ let button;
 
 let myFont;
 function preload() {
-  myFont = loadFont('/Lato-Bold.ttf');
+  myFont = loadFont('Lato-Bold.ttf');
 }
 
 function setup() {
@@ -28,7 +28,7 @@ function setup() {
   button = createButton('CLICK ME!');
   button.parent('button-holder');
   button.mousePressed(buttonPressed);
-  
+
   background(0);
   frameRate(60);
   textFont(myFont);
@@ -37,7 +37,7 @@ function setup() {
   console.log(bodyType[int(random(bodyType.length))]);
   console.log('bodyType array length ' + bodyType.length);
   //console.log('challenge array length ' + challenge.length)
-  
+
 }
 
 function draw() {
@@ -47,7 +47,7 @@ function buttonPressed() {
   var myVar = setInterval(bgAni, 100);
   setTimeout(function(){ clearInterval(myVar); }, 1500);
   setTimeout(function(){textRender()}, 1501);
-  
+
 }
 
 function textRender() {
@@ -63,7 +63,7 @@ function textRender() {
   wrds1 = 'The head of a ' + bodyType[mr] + '.';
   wrds2 = 'The body of a ' + bodyType[gr] + '.';
   wrds3 = 'The legs of a ' + bodyType[br] + '.';
-    
+
   //cr = int(random(challenge.length));
   //wrds4 = challenge[cr];
 
@@ -104,5 +104,5 @@ function fortText() {
   text(wrds1, width*0.5, height*0.45);
   text(wrds2, width*0.5, height*0.55);
   text(wrds3, width*0.5, height*0.65);
-  
+
 }
